@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package api;
+
+service Posts {
+  rpc Keluar(KeluarRequest) returns (KeluarResponse) {}
+  rpc Masuk(MasukRequest) returns (MasukResponse) {}
+}
+
+message KeluarRequest {
+  string id_kartu_akses = 1;
+}
+
+message KeluarResponse {
+  string message = 1;
+}
+
+message MasukRequest {
+  string id_kartu_akses = 1;
+  string id_register_gate = 2;
+}
+
+message MasukResponse {
+  string message = 1;
+}
+
